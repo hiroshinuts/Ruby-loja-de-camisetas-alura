@@ -1,0 +1,30 @@
+
+
+<% if flash[:notice] %>
+	<div class="alert alert-succes" role="alert"><%= flash[:notice] %></div>
+<% end %>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Descricao</th>
+			<th>Preco</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @produtos_por_nome %>
+	</tbody>
+</table>
+<table class="table table-bordered">
+		<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Descricao</th>
+			<th>Preco</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @produtos_por_preco %>
+	</tbody>
+	<%= link_to "Criar novo produto", new_produto_path %>
+</table>
